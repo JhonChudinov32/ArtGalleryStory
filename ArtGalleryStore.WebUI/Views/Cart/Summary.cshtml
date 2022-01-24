@@ -1,0 +1,16 @@
+﻿@model ArtGalleryStore.Domain.Entities.Cart
+
+
+<div class="navbar-right">
+    @Html.ActionLink("Заказать", "Index", "Cart",
+    new { returnUrl = Request.Url.PathAndQuery },
+    new { @class = "btn btn-default navbar-btn" })
+</div>
+
+<div class="navbar-text navbar-right">
+    <b> Ваша корзина:</b>
+    @Model.Lines.Sum(x => x.Quantity) Картин,
+    @Model.ComputeTotalValue().ToString("# руб")
+</div>
+
+

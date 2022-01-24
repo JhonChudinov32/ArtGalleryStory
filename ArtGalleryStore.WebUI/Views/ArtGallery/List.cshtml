@@ -1,0 +1,16 @@
+﻿@using ArtGalleryStore.WebUI.Models
+@using ArtGalleryStore.WebUI.HtmlHelpers
+@model ArtGallerysListViewModel
+
+@{
+    ViewBag.Title = "Товары";
+}
+
+@foreach (var p in @Model.ArtGallerys)
+{
+    @Html.Partial("ArtGallerySummary", p)
+}
+<div>
+    @Html.PageLinks(Model.PagingInfo, x => Url.Action("List", new { page = x, category = Model.CurrentCategory }))
+</div>
+

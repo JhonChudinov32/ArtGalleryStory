@@ -1,0 +1,78 @@
+﻿<!DOCTYPE html>
+<html style="font-size: 16px;">
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta charset="utf-8" />
+    <meta name="keywords" content="inspiration, About Team, Doing The Right Thing,&nbsp;At The Right Time">
+    <meta name="description" content="">
+    <meta name="page_type" content="np-template-header-footer-from-plugin">
+    <link href="~/Content/bootstrap.css" rel="stylesheet" />
+    <link href="~/Content/bootstrap-theme.css" rel="stylesheet" />
+    <link href="~/Content/ErrorStyles.css" rel="stylesheet" />
+    <title>@ViewBag.Title</title>
+    <link rel="stylesheet" href="~/Content/nicepage.css" media="screen">
+    <link rel="stylesheet" href="~/Content/Home-1.css" media="screen">
+    <script class="u-script" type="text/javascript" src="~/Scripts/jquery-1.9.1.min.js" defer=""></script>
+    <script class="u-script" type="text/javascript" src="~/Content/nicepage.js" defer=""></script>
+    <meta name="generator" content="Nicepage 4.0.14, nicepage.com">
+    <link id="u-theme-google-font" rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:100,100i,300,300i,400,400i,500,500i,700,700i,900,900i|Open+Sans:300,300i,400,400i,600,600i,700,700i,800,800i">
+    <style>
+        .navbar-right {
+            float: right !important;
+            margin-right: 15px;
+            margin-left: 15px;
+        }
+    </style>
+    <meta name="theme-color" content="#bcdfec">
+    <meta property="og:title" content="Home 1">
+    <meta property="og:type" content="website">
+</head>
+<body  class="u-body">
+    <div class="navbar navbar-inverse" role="navigation">
+        <a class="navbar-brand" href="#">
+            <span class="hidden-xs">ArtGalleryStore</span>
+            <div class="visible-xs">ArtGallery</div>
+            <div class="visible-xs">Store</div>
+        </a>
+        @Html.Action("Summary", "Cart")
+    </div>
+    <div class="row panel">
+        <div id="categories" class="col-xs-3">
+            @Html.Action("Menu", "Nav")
+        </div>
+        <div class="col-xs-8">
+            @RenderBody()
+        </div>
+    </div>
+    <section class="u-backlink u-clearfix u-grey-80">
+        <a class="u-link">
+            @Html.ActionLink("ArtGalleryStory", "Index", "Home")
+            <span>&copy;@DateTime.Now.Year</span>
+        </a>.
+    </section>
+
+</body>
+</html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   
+
+
+
+
+
+
+
+
